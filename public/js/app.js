@@ -8,7 +8,7 @@ function disp(){
     one.innerText = 'Loading...'
     two.innerHTML = ' '
 
-    fetch('http://localhost:3000/weather?address='+ place +'').then((response) => {
+    fetch('/weather?address='+ place +'').then((response) => {
             response.json().then( (data) =>{
                 if(data.error){
                     one.innerText = ''
